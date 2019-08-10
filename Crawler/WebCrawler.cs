@@ -62,7 +62,7 @@ namespace Crawler
                 {
                     int recordsOnPage = GetRecordsPerPage(page, ref publicationsNumberTemp);
                     List<IWebElement> textfields = new List<IWebElement>();
-                    textfields = webDriver.FindElementsExtension(By.CssSelector("a[href*='resourceDetailsBPP&rId=']"), 10).ToList();
+                    textfields = webDriver.FindElementsExtension(By.CssSelector("a[href*='resourceDetailsBPP&rId=']"), 3600).ToList();
                     foreach (IWebElement field in textfields)
                     {
                         var link = field.GetAttribute("href");
